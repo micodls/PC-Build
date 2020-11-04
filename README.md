@@ -88,6 +88,7 @@
     * References
         * [BCM94360CS instead of CD?](https://www.tonymacx86.com/threads/bcm94360cs-instead-of-cd.189383/)
         * [](https://www.reddit.com/r/hackintosh/wiki/faq)
+        * [](https://github.com/dortania/Wireless-Buyers-Guide/blob/master/types-of-wireless-card/pcie.md)
 
 ## Picking your parts
 --
