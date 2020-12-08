@@ -226,6 +226,10 @@ Beautify
  * Binary Resources
  * OpenCanopy-Big-Sur
 
+2. Remove debug logs
+* Misc -> Debug -> AppleDebug -> False
+* remove -v from boot-args
+* Misc -> Debug -> Target : 3
 
 #### Not Enough Disk Space to Copy EFI
 sudo -s
