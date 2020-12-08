@@ -214,6 +214,14 @@ Sleep/Wake - oob
 ##### Port Mapping
 1. Insert USBMap.kext in your kexts folder. Update config.plist (cmd + R)
 2. Set XCHIPortLimit to False
+
+
+### F1 Boot error
+
+Set DisableRtcChecksum to True
+
+#### Fixes
+
 ## Credits
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
