@@ -246,6 +246,8 @@
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+				<key>device-id</key>
+				<data>mz4AAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0,0x0)</key>
 			<dict>

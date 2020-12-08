@@ -1,5 +1,10 @@
 # Hackintosh
 
+## Hardware
+* Asus Strix z490-i
+* Intel i5-10600K
+* Sapphire Nitro+ rx5700XT
+
 ## Software
 
 * Bootloader: OpenCore 0.6.4-DEBUG
@@ -56,51 +61,84 @@ Version: 0607
 * [gfxutil]()
 * [FakePCIID kexts]()
 
-### Fixes
+#### Fixes
 
-#### Clearer audio
+##### Choppy audio
 1. Insert result of gfxutil -f HDEF in config.plist
 2. Update config.plist -> DeviceProperties -> Add
 PciRoot(0x0) | Dictionary
 layout-id | Number | 7 (or try other layout ids)
 
-#### Intel HDMI Audio
+##### Intel HDMI Audio not showing
 1. Insert FakePCIID.kext and FakePCIID_Intel_HDMI_Audio.kext in your kexts folder. Update config.plist (cmd + R)
 2. Update config.plist -> DeviceProperties -> Add
 PciRoot(0x0) | Dictionary
 device-id | Data | <709D0000>
 
-### After Fixes
+#### After Fixes
 
-### Issues
+#### Issues
 1. Only 1 audio output port is working (Front Panel connector)
 2. Audio input not yet tested
 
 ### DRM
 
-### Before Fixes
+#### Before Fixes
 
 * Hardware accelaration works out of the box
 * FairPlay 1.x works
-* FairPlay 2.x works
+* FairPlay 2.x/3.x works
 * FairPlay 4.x - not tested
 
-### Tools
+#### Tools
 * [VDADecoderChecker]()
 * [VideoProc]()
+* [Google Chrome]()
 
-### Fixes
+#### Fixes
 1. None
 
-### After Fixes
-
-### Issues
-1. Only 1 audio output port is working (Front Panel connector)
-2. Audio input not yet tested
+#### Issues
+1. iGPU showing in videoproc instead of dGPU
 
 
+### iGPU
+
+* Hardware: Intel UHD Graphics 630
+
+### Before Fixes
+
+### Tools
+
+#### Fixes
+
+##### iGPU not showing in hackintool
+1. Update config.plist -> DeviceProperties -> Add
+PciRoot(0x0) | Dictionary
+device-id | Data | <9B3E0000>
+
+##### Intel HDMI Audio
+1. Insert FakePCIID.kext and FakePCIID_Intel_HDMI_Audio.kext in your kexts folder. Update config.plist (cmd + R)
+2. Update config.plist -> DeviceProperties -> Add
+PciRoot(0x0) | Dictionary
+device-id | Data | <709D0000>
+
+#### After Fixes
 
 
+### dGPU
+
+* Hardware: Sapphire Nitro+ rx5700XT
+* Works out of the box
+
+### Before Fixes
+
+### Tools
+* [RadeonBoost kexts]() - not working
+
+#### Fixes
+
+#### After Fixes
 ## Credits
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
