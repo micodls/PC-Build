@@ -16,7 +16,6 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 * [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 * [Sanity Checker](https://opencore.slowgeek.com/)
 
-
 ### BIOS
 
 Version: 0607
@@ -39,6 +38,68 @@ Version: 0607
 * OS type: Windows UEFI Mode (Clear Secure Boot Keys or choose `Other` type)
 * DVMT Pre-Allocated: 64MB
 * SATA Mode Selection: AHCI
+
+## Post Install
+
+### Screenshots
+### Tools
+* [neofetch]()
+* [hackintool]()
+
+### Audio
+
+* Hardware: Realtek ALCS122A
+
+### Before Fixes
+
+### Tools
+* [gfxutil]()
+* [FakePCIID kexts]()
+
+### Fixes
+
+#### Clearer audio
+1. Insert result of gfxutil -f HDEF in config.plist
+2. Update config.plist -> DeviceProperties -> Add
+PciRoot(0x0) | Dictionary
+layout-id | Number | 7 (or try other layout ids)
+
+#### Intel HDMI Audio
+1. Insert FakePCIID.kext and FakePCIID_Intel_HDMI_Audio.kext in your kexts folder. Update config.plist (cmd + R)
+2. Update config.plist -> DeviceProperties -> Add
+PciRoot(0x0) | Dictionary
+device-id | Data | <709D0000>
+
+### After Fixes
+
+### Issues
+1. Only 1 audio output port is working (Front Panel connector)
+2. Audio input not yet tested
+
+### DRM
+
+### Before Fixes
+
+* Hardware accelaration works out of the box
+* FairPlay 1.x works
+* FairPlay 2.x works
+* FairPlay 4.x - not tested
+
+### Tools
+* [VDADecoderChecker]()
+* [VideoProc]()
+
+### Fixes
+1. None
+
+### After Fixes
+
+### Issues
+1. Only 1 audio output port is working (Front Panel connector)
+2. Audio input not yet tested
+
+
+
 
 ## Credits
 
