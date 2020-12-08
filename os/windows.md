@@ -3,6 +3,16 @@
 
 ## Creating a bootable USB installer via macOS
 
+## Via Terminal
+---
+### Prerequisites
+1. Download Windows 10 ISO [here](https://www.microsoft.com/en-us/software-download/windows10ISO)
+
+### Steps
+1. Plug a USB drive into your Mac.
+
+## Via UNetbootin (Didn't work for me)
+
 ### Prerequisites
 1. Download Windows 10 ISO [here](https://www.microsoft.com/en-us/software-download/windows10ISO)
 2. Download and install UNetbootin [here](https://unetbootin.github.io/)
@@ -38,4 +48,5 @@
 
 # References
 ---
+* https://www.youtube.com/watch?v=6wEOin8PclQ
 * https://www.top-password.com/blog/create-windows-10-bootable-usb-from-iso-on-mac/
