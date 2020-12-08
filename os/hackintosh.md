@@ -118,12 +118,6 @@ device-id | Data | <709D0000>
 PciRoot(0x0) | Dictionary
 device-id | Data | <9B3E0000>
 
-##### Intel HDMI Audio
-1. Insert FakePCIID.kext and FakePCIID_Intel_HDMI_Audio.kext in your kexts folder. Update config.plist (cmd + R)
-2. Update config.plist -> DeviceProperties -> Add
-PciRoot(0x0) | Dictionary
-device-id | Data | <709D0000>
-
 #### After Fixes
 
 
@@ -219,6 +213,8 @@ Sleep/Wake - oob
 ### F1 Boot error
 
 Set DisableRtcChecksum to True
+
+
 
 #### Fixes
 
