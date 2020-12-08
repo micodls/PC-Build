@@ -139,6 +139,68 @@ device-id | Data | <709D0000>
 #### Fixes
 
 #### After Fixes
+
+#### Benchmarks
+Cinebench
+
+
+Geekbench
+
+### Wi-Fi
+
+* Hardware: BCM
+* Works out of the box
+* No kexts needed
+
+### Before Fixes
+
+### Tools
+
+#### Fixes
+
+#### After Fixes
+
+
+### Bluetooth
+
+* Hardware: BCM
+
+### Before Fixes
+
+### Tools
+
+#### Fixes
+
+##### Can't search devices/Can't toggle on or off
+1. USB Mapping needed
+
+#### After Fixes
+### Ethernet
+
+* Hardware: Intel I225-V 2.5Gbit
+
+### Before Fixes
+
+### Tools
+
+#### Fixes
+
+##### Not showing in network preferences
+1. Download FakePCIID.kext and FakePCIID_Intel_I225-V.kext in your kexts folder. Update config.plist (cmd + R)
+2. Change config.plist -> DeviceProperties -> Add
+PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0,0x0) | Dictionary to PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0) | Dictionary
+3. Update config.plist -> DeviceProperties -> Add
+PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0) | Dictionary
+device-id | Data | <F2150000>
+
+#### After Fixes
+
+#### Issues
+1. Not tested with ethernet cable
+
+iService - not yet tested
+Power Management - oob
+Sleep/Wake - oob
 ## Credits
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
