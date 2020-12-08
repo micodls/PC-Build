@@ -218,6 +218,20 @@ Set DisableRtcChecksum to True
 
 #### Fixes
 
+
+Beautify
+
+1. Boot GUI
+ * OpenCanopy efi
+ * Binary Resources
+ * OpenCanopy-Big-Sur
+
+
+#### Not Enough Disk Space to Copy EFI
+sudo -s
+diskutil list
+newfs_msdos -v EFI /dev/diskNsN
+
 ## Credits
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
