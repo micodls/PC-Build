@@ -170,6 +170,9 @@ Geekbench
 1. USB Mapping needed
 
 #### After Fixes
+
+#### Issues
+1. Bluetooth speakers/earphones are choppy - wifi should be connected on 5Ghz to lessen bluetooth interruption
 ### Ethernet
 
 * Hardware: Intel I225-V 2.5Gbit
@@ -230,6 +233,7 @@ Beautify
 * Misc -> Debug -> AppleDebug -> False
 * remove -v from boot-args
 * Misc -> Debug -> Target : 3
+* No need to change opencore debug version to release
 
 #### Not Enough Disk Space to Copy EFI
 sudo -s
