@@ -60,6 +60,7 @@ Version: 0607
 ### Tools
 * [gfxutil]()
 * [FakePCIID kexts]()
+* [IORegistryExplorer]
 
 #### Fixes
 
@@ -186,7 +187,7 @@ Geekbench
 #### Fixes
 
 ##### Not showing in network preferences
-1. Download FakePCIID.kext and FakePCIID_Intel_I225-V.kext in your kexts folder. Update config.plist (cmd + R)
+1. Insert FakePCIID.kext and FakePCIID_Intel_I225-V.kext in your kexts folder. Update config.plist (cmd + R)
 2. Change config.plist -> DeviceProperties -> Add
 PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0,0x0) | Dictionary to PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0) | Dictionary
 3. Update config.plist -> DeviceProperties -> Add
@@ -201,6 +202,18 @@ device-id | Data | <F2150000>
 iService - not yet tested
 Power Management - oob
 Sleep/Wake - oob
+
+
+### USB Map
+
+#### Tools
+* [USBMap]()
+
+#### Fixes
+
+##### Port Mapping
+1. Insert USBMap.kext in your kexts folder. Update config.plist (cmd + R)
+2. Set XCHIPortLimit to False
 ## Credits
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
