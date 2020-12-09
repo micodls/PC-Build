@@ -1,6 +1,17 @@
 # Windows 10
 ---
 
+1. Disconnect drive where macos is installed
+2. Install windows
+* os type: Other OS
+3. Plug macos drive again
+4. Fix boot order priority
+
+Windows update
+GPU - amd auto detect
+mobo - asus strix v0.9
+
+
 ## Creating a bootable USB installer via macOS
 
 ## Via Terminal
@@ -10,6 +21,12 @@
 
 ### Steps
 1. Plug a USB drive into your Mac.
+2. diskutil list
+3. diskutil eraseDisk MS-DOS "WINDOWS10" MBR diskN
+4. rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_EN-US_DV9/ /Volumes/WINDOWS10
+5. /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Hom...)"
+6. brew install wimlib
+7. wimlib-imagex split /Volumes/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim /Volumes/WINDOWS10/sources/install.swm 4000
 
 ## Via UNetbootin (Didn't work for me)
 

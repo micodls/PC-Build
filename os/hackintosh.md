@@ -39,7 +39,7 @@ Version: 0607
 * Above 4G Decoding
 * XHCI Hand-off
 * Hyper-Threading
-* OS type: Other OS or OS type: Windows UEFI Mode (if secure boot is disabled)
+* OS type: Other OS or OS type: Windows UEFI Mode (if you cleared secure boot keys)
 * OS type: Windows UEFI Mode (Clear Secure Boot Keys or choose `Other` type)
 * DVMT Pre-Allocated: 64MB
 * SATA Mode Selection: AHCI
@@ -239,6 +239,9 @@ Beautify
 sudo -s
 diskutil list
 newfs_msdos -v EFI /dev/diskNsN
+
+Others:
+Fix ROM
 
 ## Credits
 
