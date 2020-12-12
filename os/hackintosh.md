@@ -23,7 +23,7 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 
 ### BIOS
 
-Version: 0607
+Version: 0901 (downloaded from asus website)
 
 #### Disable
 
@@ -43,6 +43,8 @@ Version: 0607
 * OS type: Windows UEFI Mode (Clear Secure Boot Keys or choose `Other` type)
 * DVMT Pre-Allocated: 64MB
 * SATA Mode Selection: AHCI
+
+* Multi monitor mode: Enabled
 
 ## Post Install
 
