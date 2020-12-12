@@ -3,13 +3,64 @@
 
 1. Disconnect drive where macos is installed
 2. Install windows
-* os type: Other OS
-3. Plug macos drive again
-4. Fix boot order priority
+* os type: Windows UEFI
+3. Install Broadcom drivers
+   9. Broadcom WIFI - use Broadcom FORCED
+      - right click on Other Device -> Network Interface
+      - Update Driver -> Browse my computer for drivers -> find deepest folder of FORCED
+      - After this, you can now see WiFi 2 in your Wifi options
+      - Disable intel wifi since we are going to use broadcom
+      - You should only NOT see WiFI 2 anymore but the signal should be stronger
+   10. Broadcom BLUETOOTH - use BCM943602CS Bluetooth Driver 2
+      - Disable intel bluetooth
+      - right click on OTher Devices -> Blueooth USB Host Controller -> Uninstall device
+      - Run as admin DPInst inside bluetooth driver 2 (next next next)
+4. Install armory crate
+5. Install radeon software
+
+3. Connect to wifi (should be super near your pc since intel chip does not have any antennas)/ethernet and run windows update. Restart if necessary
+4. Update ASUS drivers
+   1. BIOS
+   2. Chipset
+   3. Intel ME
+   4. Audio
+   5. LAN
+      - Update firmwire first. Shutdown and unplug for 1min
+      - Then update drivers
+   6. Wireless (even if not in use because someday Built In Intel wifi will be fixed in opencore and we won't need to use BCM chips anymore)
+   7. VGA drivers - Not really
+   8. SATA RST (Rapid Store Technology) - difference is miniscule so do whatever
+   9. Broadcom WIFI - use Broadcom FORCED
+      - right click on Other Device -> Network Interface
+      - Update Driver -> Browse my computer for drivers -> find deepest folder of FORCED
+      - After this, you can now see WiFi 2 in your Wifi options
+      - Disable intel wifi since we are going to use broadcom
+      - You should only NOT see WiFI 2 anymore but the signal should be stronger
+   10. Broadcom BLUETOOTH - use BCM943602CS Bluetooth Driver 2
+      - Disable intel bluetooth
+      - right click on OTher Devices -> Blueooth USB Host Controller -> Uninstall device
+      - Run as admin DPInst inside bluetooth driver 2 (next next next)
+   11. Restart
+5. Update radeon graphics card and restart
+6. There would be some PCI Device and SM Bus Controller in other devices that are unknown. Can be fixed by 7
+7. For other updates use Snappy Driver Installer (Optional)
+8. Plug macos drive again
+   - boot to bios
+   - reset BIOS settings for hackintosh
+   - Fix boot order priority
+   - reset
+
+NOTE: DO NOT BOOT INTO WINDOWS USING OC BOOTPICKER. THIS WILL CAUSE WINDOWS TO USE HACKINTOSH SMBIOS. use f8 to boot
+
+both ssd's show as windows/bluescreen
+1. assign name for macos efi
+2. mount macos efi
+3. download total commander
+4. rename bootmgw to bootmgw-orig
 
 Windows update
 GPU - amd auto detect
-mobo - asus strix v0.9
+mobo - asus strix
 
 
 ## Creating a bootable USB installer via macOS
@@ -21,6 +72,7 @@ mobo - asus strix v0.9
 
 ### Steps
 1. Plug a USB drive into your Mac.
+2. Mount Windows 10 ISO
 2. diskutil list
 3. diskutil eraseDisk MS-DOS "WINDOWS10" MBR diskN
 4. rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_EN-US_DV9/ /Volumes/WINDOWS10
