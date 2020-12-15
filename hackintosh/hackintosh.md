@@ -47,7 +47,8 @@
 
 * OS type: Windows UEFI Mode (if `Secure boot keys: Cleared`) or OS type: Other OS
 
-    ![](../assets/hackintosh/bios_os.jpg)
+    ![](../assets/hackintosh/bios_clear_secure.jpg)
+    ![](../assets/hackintosh/bios_os_type.jpg)
 
 * DVMT Pre-Allocated: 64MB (only available if `OS type: Other OS`)
 
@@ -59,7 +60,7 @@
 
 * Multi monitor mode: Enabled
 
-    ![](../assets/hackintosh/bios_multi_monitor.jpg)
+    ![](../assets/hackintosh/bios_igpu.jpg)
 
 ## Bootable USB, EFI and Installation
 ---
