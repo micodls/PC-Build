@@ -26,3 +26,4 @@ Type|Item
 **Wifi Card** | [BCM943602CS]()
 **Misc** | [12+6 Pin Bluetooth WiFi Wireless Card Module to M.2 NGFF Key B+M Adapter]()
 **Misc** | [2x 6dBi M.2 IPEX MHF4 U.fl Cable to RP-SMA Wifi Antenna Signal Cable Set for Intel AC 9260 9560]()
+**Misc** | [Ruibull Pci-E Wireless Wifi Mhf4 Laptop Dual Band M.2 Antenna For Ngff Bluetooth]()
